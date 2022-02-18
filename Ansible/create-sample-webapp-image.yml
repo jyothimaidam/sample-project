@@ -1,0 +1,19 @@
+---
+- hosts: Ansible-server
+  become: true
+
+  tasks:
+  - name: create docker image using war file
+    command: docker build -t simplewebapp:latest .
+    args:
+      chdir: /home/ubuntu
+
+  - name: create tag to image
+    command: docker tag simplewebapp rama80081/simplewebapp
+
+  - name: push image on to dockerhub
+    command: docker push rama80081/sample
+
+  - name: remove docker images form ansible server
+    command: docker rmi simplewebapp:latest rama80081/simplewebapp
+    ignore_errors: yes
