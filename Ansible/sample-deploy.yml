@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-deployment
+spec:
+  selector:
+    matchLabels:
+      app: sample-devops-project
+  replicas: 2 
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
+  template:
+    metadata:
+      labels:
+        app: sample-devops-project
+    spec:
+      containers:
+      - name: sample-devops-project
+        image: rama80081/sample
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
