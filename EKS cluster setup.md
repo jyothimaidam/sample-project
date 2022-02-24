@@ -28,7 +28,7 @@ AmazonEC2FullAccess
 IAMFullAccess
 AWSCloudFormationFullAccess
 
-You also need to create an inline policy, using the following:
+we also need to create an inline policy, using the following:
 --------------------------------------------------------------
 
 {
