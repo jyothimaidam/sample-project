@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>Welcome to rathna Global Retails PVT ltd</h1>
+    <h1>Welcome Ratna Global Retails PVT LTD</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
